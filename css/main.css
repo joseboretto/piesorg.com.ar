@@ -7,12 +7,22 @@
     background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0) 0, rgba(34, 34, 34, 0) 0%);
     /*cambiamos seleccionanos el color que queremos*/
     background-color: white;
+    /*trazo del manuy*/
+    border-color: #fff;
+    width: 100%;
 }
-
-.imagenHeader {
+.imagenHeaderLogo {
     /*    le damos una altura a la imagen*/
     height: 100px;
     margin: 14px;
+}
+
+
+.imagenHeaderLetras {
+    /*    le damos una altura a la imagen*/
+    height: 50px;
+    margin: 14px;
+    vertical-align: bottom;
 }
 
 .verticalLine {
@@ -67,7 +77,7 @@
 
 body {
     /*100px de la imagen + 14*2 del margen*/
-    margin-top: 128px;
+    margin-top: 100px;
 }
 .lightBoxGallery {
   text-align: center;
@@ -106,7 +116,15 @@ body {
     background: linear-gradient(180deg, red 80%, white 20%);
 }
 
+/*=====================================================
+=            BpRIMERAS TERMIS IMAGENES       =
+=====================================================*/
+.textoAreas{
 
+}
+.seccionesQueHacemos{
+
+}
 /*=====================================================
 =            Bootstrap 2.3.2 Media Queries            =
 =====================================================*/
@@ -121,10 +139,27 @@ body {
     .navbar-right {
         margin-top: 0px;
     }
-    .imagenHeader {
-        /*    le damos una altura a la imagen*/
-        height: 60px;
-    }
+    .imagenHeaderLogo {
+    /*    le damos una altura a la imagen*/
+    height: 50px;
+}
+
+.navbar-inverse {
+    border-color: #000;
+}
+.imagenHeaderLetras {
+    /*    le damos una altura a la imagen*/
+    height: 50px;
+    width: 150px;
+    margin: 0;
+    margin-bottom: 5px;
+
+}
+
+    body {
+    /*100px de la imagen + 14*2 del margen*/
+    margin-top: 80px;
+}
 }
 
 @media only screen and (max-width: 320px) {
