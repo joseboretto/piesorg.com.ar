@@ -30,34 +30,6 @@
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <!--<script src="js/js-anclas.js"></script>-->
-    <script>
-        $(document).ready(function () {
-            $("#botonDonaciones").click(function () {
-                $("#textoDonaciones").toggle();
-
-                $('html, body').animate({
-                    scrollTop: $("#textoDonaciones").offset().top
-                }, 1000);
-            });
-
-            $("#botonAN").click(function () {
-                $("#textoAN").toggle();
-
-                $('html, body').animate({
-                    scrollTop: $("#textoAN").offset().top
-                }, 1000);
-            });
-
-            $("#botonIPV").click(function () {
-                $("#textoIPV").toggle();
-
-                $('html, body').animate({
-                    scrollTop: $("#textoIPV").offset().top
-                }, 1000);
-            });
-
-        });
-    </script>
 
 </head>
 
@@ -542,31 +514,33 @@
     <!-- /container -->
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
 
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
 
-    <script src="js/vendor/bootstrap.min.js"></script>
 
-    <script src="js/main.js"></script>
+</body>
+<script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+</script>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function (b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l;
-            b[l] || (b[l] =
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
                 function () {
                     (b[l].q = b[l].q || []).push(arguments)
                 });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = '//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-XXXXX-X', 'auto');
-        ga('send', 'pageview');
-    </script>
-</body>
-
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+</script>
+<footer><script src="js/main.js"></script></footer>
 </html>
