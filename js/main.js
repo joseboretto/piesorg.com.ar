@@ -1,12 +1,4 @@
-(document).ready(function () {
-    $("#botonDonaciones").click(function () {
-        $("#textoDonaciones").toggle();
-        $("#textoAN").hide();
-        $("#textoIPV").hide();
-        $('html, body').animate({
-            scrollTop: $("#textoDonaciones").offset().top
-        }, 1000);
-    });
+$(document).ready(function () {
     $("#botonAN").click(function () {
         $("#textoAN").toggle();
         $("#textoDonaciones").hide();
@@ -21,6 +13,14 @@
         $("#textoDonaciones").hide();
         $('html, body').animate({
             scrollTop: $("#textoIPV").offset().top - 120
+        }, 1000);
+    });
+    $("#botonDonaciones").click(function () {
+        $("#textoDonaciones").toggle();
+        $("#textoAN").hide();
+        $("#textoIPV").hide();
+        $('html, body').animate({
+            scrollTop: $("#textoDonaciones").offset().top
         }, 1000);
     });
 });

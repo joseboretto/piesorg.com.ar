@@ -1,4 +1,15 @@
 /* ==========================================================================
+   eSTA ROTO EL RESPOSIVE, HAY ALGO QUE LO ROMPE, NO LO ENCUETRO
+   ========================================================================== */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================================
    Barra de navegacion
    ========================================================================== */
 
@@ -11,12 +22,12 @@
     border-color: #fff;
     width: 100%;
 }
+
 .imagenHeaderLogo {
     /*    le damos una altura a la imagen*/
     height: 100px;
     margin: 14px;
 }
-
 
 .imagenHeaderLetras {
     /*    le damos una altura a la imagen*/
@@ -79,26 +90,25 @@ body {
     /*100px de la imagen + 14*2 del margen*/
     margin-top: 100px;
 }
+
 .lightBoxGallery {
-  text-align: center;
+    text-align: center;
 }
+
 .lightBoxGallery img {
-  margin: 5px;
+    margin: 5px;
 }
 
-.top-buffer { 
-  margin-top:40px; 
+.top-buffer {
+    margin-top: 40px;
 }
 
-.carousel-caption-btn{
-
-  position:absolute;
-  right:1%;
-  bottom:0%;
-  left:99%;
+.carousel-caption-btn {
+    position: absolute;
+    right: 1%;
+    bottom: 0%;
+    left: 99%;
 }
-
-
 
 .grid--borderBetween {
     background: #ed5d07;
@@ -108,23 +118,26 @@ body {
     width: 4px;
     top: 0;
 }
-.color-letra{
+
+.color-letra {
     color: white;
 }
+
 .backImagen {
     height: 100%;
     background: linear-gradient(180deg, red 80%, white 20%);
 }
 
+
 /*=====================================================
 =            BpRIMERAS TERMIS IMAGENES       =
 =====================================================*/
-.textoAreas{
 
-}
-.seccionesQueHacemos{
+.textoAreas {}
 
-}
+.seccionesQueHacemos {}
+
+
 /*=====================================================
 =            Bootstrap 2.3.2 Media Queries            =
 =====================================================*/
@@ -140,31 +153,28 @@ body {
         margin-top: 0px;
     }
     .imagenHeaderLogo {
-    /*    le damos una altura a la imagen*/
-    height: 50px;
-}
-
-.navbar-inverse {
-    border-color: #000;
-}
-.imagenHeaderLetras {
-    /*    le damos una altura a la imagen*/
-    height: 50px;
-    width: 150px;
-    margin: 0;
-    margin-bottom: 5px;
-
-}
-
+        /*    le damos una altura a la imagen*/
+        height: 50px;
+    }
+    .navbar-inverse {
+        border-color: #000;
+    }
+    .imagenHeaderLetras {
+        /*    le damos una altura a la imagen*/
+        height: 50px;
+        width: 150px;
+        margin: 0;
+        margin-bottom: 5px;
+    }
     body {
-    /*100px de la imagen + 14*2 del margen*/
-    margin-top: 80px;
-}
+        /*100px de la imagen + 14*2 del margen*/
+        margin-top: 80px;
+    }
 }
 
 @media only screen and (max-width: 320px) {
     .colorRojo {
         /* Para que entre el texto en las panatallas mas chicas*/
-/*        font-size: 12px;*/
+        /*        font-size: 12px;*/
     }
 }
