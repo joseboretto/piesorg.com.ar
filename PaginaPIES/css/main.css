@@ -1,0 +1,186 @@
+/* ==========================================================================
+   eSTA ROTO EL RESPOSIVE, HAY ALGO QUE LO ROMPE, NO LO ENCUETRO
+   ========================================================================== */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    /*100px de la imagen + 14*2 del margen*/
+    height: 100%;
+    margin: 0;
+    margin-top: 60px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.intro-header {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* or overflow:auto; if you want scrollbars */
+}
+
+
+/* ==========================================================================
+   CONATCTO
+   ========================================================================== */
+
+.equal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equal > div[class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================================================
+   Barra de navegacion
+   ========================================================================== */
+
+.navbar-inverse {
+    /*Sobre esxcribimos el bacground image de bootsrap.css y le pongo color transparente*/
+    background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0) 0, rgba(34, 34, 34, 0) 0%);
+    /*cambiamos seleccionanos el color que queremos*/
+    background-color: white;
+    /*trazo del manuy*/
+    border-color: #fff;
+    width: 100%;
+}
+
+.imagenHeaderLogo {
+    /*    le damos una altura a la imagen*/
+    height: 100px;
+    margin: 14px;
+}
+
+.imagenHeaderLetras {
+    /*    le damos una altura a la imagen*/
+    height: 50px;
+    margin: 14px;
+    vertical-align: bottom;
+}
+
+.textoHeader {
+    /*lo mismo que verical line*/
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 14px;
+}
+
+.colorNaranja {
+    color: rgb(234, 91, 12) !important;
+    /*    sobre escribimos la sobra*/
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0)!important;
+}
+
+.navbar-right {
+    /*    fue la unica forma que encontre de bajar el texto de la derecha, despues cuando es mobile hay que sacarlo*/
+    margin-top: 25px;
+    /*    width: 450px;*/
+}
+
+
+/*color del boton*/
+
+.navbar-inverse .navbar-toggle:focus {
+    background-color: red;
+}
+
+.navbar-inverse .navbar-toggle:active {
+    background-color: white;
+}
+
+.navbar-inverse .navbar-toggle {
+    background-color: red;
+}
+
+.tablaIconos {
+    width: 100%;
+    text-align: center;
+}
+
+.lightBoxGallery {
+    text-align: center;
+}
+
+.lightBoxGallery img {
+    margin: 5px;
+}
+
+.top-buffer {
+    margin-top: 40px;
+}
+
+.carousel-caption-btn {
+    position: absolute;
+    right: 1%;
+    bottom: 0%;
+    left: 99%;
+}
+
+.grid--borderBetween {
+    background: #ed5d07;
+    bottom: 0;
+    content: " ";
+    position: absolute;
+    width: 4px;
+    top: 0;
+}
+
+.color-letra {
+    color: white;
+}
+
+.backImagen {
+    background: rgb(190, 22, 33);
+}
+
+.botonAmpliacion {
+    width: 75%;
+}
+
+
+/*=====================================================
+=            Bootstrap 2.3.2 Media Queries            =
+=====================================================*/
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 979px) {}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 480px) {
+    .navbar-right {
+        margin-top: 0px;
+    }
+    .imagenHeaderLogo {
+        /*    le damos una altura a la imagen*/
+        height: 50px;
+    }
+    .navbar-inverse {
+        border-color: #000;
+    }
+    .imagenHeaderLetras {
+        /*    le damos una altura a la imagen*/
+        height: 50px;
+        width: 150px;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    body {
+        /*100px de la imagen + 14*2 del margen*/
+        margin-top: 80px;
+    }
+    .botonAmpliacion {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {}
