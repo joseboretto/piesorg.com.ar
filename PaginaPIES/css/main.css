@@ -4,12 +4,12 @@
 
 html,
 body {
-    max-width: 100%;
-    overflow-x: hidden;
+/*    min-width: 100%;*/
+    /*    overflow-x: hidden;*/
     /*100px de la imagen + 14*2 del margen*/
     height: 100%;
     margin: 0;
-    margin-top: 60px;
+    margin-top: 64px;
 }
 
 p {
@@ -36,6 +36,11 @@ p {
 .equal > div[class*='col-'] {
     display: flex;
     flex-direction: column;
+}
+
+.lineaIzquierda {
+    padding-left: 5px;
+    border-left: 3px solid orangered;
 }
 
 
@@ -142,7 +147,13 @@ p {
 }
 
 .botonAmpliacion {
-    width: 75%;
+    width: 200px;
+}
+
+.text-overflow-center {
+    margin-left: -100%;
+    margin-right: -100%;
+    text-align: center;
 }
 
 
@@ -174,12 +185,17 @@ p {
         margin: 0;
         margin-bottom: 5px;
     }
-    body {
+    body,
+    html {
         /*100px de la imagen + 14*2 del margen*/
-        margin-top: 80px;
+        margin-top: 30px;
     }
     .botonAmpliacion {
-        width: 100%;
+        width: 200px;
+    }
+    .lineaIzquierda {
+        padding-left: 0px;
+        border-left: 0px;
     }
 }
 
