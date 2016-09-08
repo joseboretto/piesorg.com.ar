@@ -31,6 +31,20 @@
         (function () {
             emailjs.init("user_htnIlNnLA1EWRQGSVuJTO");
         })();
+
+        function enviarEmailContacto() {
+            console.log("INICIO ENVIAR EMIAL html");
+            emailjs.init("user_htnIlNnLA1EWRQGSVuJTO");
+            // console.log("Formulario ", nombreContacto.value, emailContacto.value, asuntoContacto.value, mensajeContacto.value);
+            //console.log("Todos los input", todosLosInput, todosLosInput.value);
+            emailjs.send("joseboretto", "plantilla", {
+                "nombre": "un nombre"
+            }).then(function (response) {
+                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+            }, function (err) {
+                console.log("FAILED. error=", err);
+            });
+        }
     </script>
     <!--
    <script>
@@ -148,9 +162,9 @@
         <div class="col-xs-1 col-md-2"></div>
         <div class="col-xs-10 col-md-8">
             <div class="text-center">
-                <h1 style="color: rgb(190,22,33);">
+                <h2 style="color: rgb(190,22,33);">
                         NOSOTROS
-                    </h1> </div>
+                    </h2> </div>
             <!--<p style="margin-left: 14%; margin-top: 2%">-->
             <p> Somos un grupo de jóvenes con un objetivo en común: fomentar vínculos a largo plazo entre la comunidad basados en los pilares de inclusión, educación, y solidaridad. Somos un grupo de jóvenes con un objetivo en común: fomentar vínculos a largo plazo entre la comunidad basados en los pilares de inclusión, educación, y solidaridad. </p>
             <p> Conformamos una organización sin fines de lucro en Argentina. No tenemos preferencias partidarias ni religiosas. </p>
@@ -180,9 +194,9 @@
         <div class="col-xs-1 "></div>
         <div class="col-xs-10">
             <div class="text-center">
-                <h1 style="color: rgb(190,22,33);">
+                <h2 style="color: rgb(190,22,33);">
                            QUÉ HACEMOS
-                        </h1> </div>
+                        </h2> </div>
             <div class="col-xs-1"></div>
         </div>
     </div>
@@ -414,7 +428,7 @@
                     </div>
                     <!-- Select Basic -->
                     <div class="form-group">
-                        <label class="col-md-4 control-label"> Area</label>
+                        <label class="col-md-4 control-label">Área</label>
                         <div class="col-md-8 selectContainer">
                             <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
                                 <select name="state" class="form-control selectpicker">
@@ -426,45 +440,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Text input-->
-                    <!--<div class="form-group">-->
-                    <!--<label class="col-md-4 control-label">Zip Code</label>-->
-                    <!--<div class="col-md-4 inputGroupContainer">-->
-                    <!--<div class="input-group">-->
-                    <!--<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>-->
-                    <!--<input name="zip" placeholder="Zip Code" class="form-control"  type="text">-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!-- Text input-->
-                    <!--<div class="form-group">-->
-                    <!--<label class="col-md-4 control-label">Website or domain name</label>-->
-                    <!--<div class="col-md-4 inputGroupContainer">-->
-                    <!--<div class="input-group">-->
-                    <!--<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>-->
-                    <!--<input name="website" placeholder="Website or domain name" class="form-control" type="text">-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!-- radio checks -->
-                    <!--<div class="form-group">-->
-                    <!--<label class="col-md-4 control-label">Do you have hosting?</label>-->
-                    <!--<div class="col-md-4">-->
-                    <!--<div class="radio">-->
-                    <!--<label>-->
-                    <!--<input type="radio" name="hosting" value="yes" /> Yes-->
-                    <!--</label>-->
-                    <!--</div>-->
-                    <!--<div class="radio">-->
-                    <!--<label>-->
-                    <!--<input type="radio" name="hosting" value="no" /> No-->
-                    <!--</label>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--</div>-->
                     <!-- Text area -->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Por qué Queres Ser Voluntario? </label>
+                        <label class="col-md-4 control-label">¿Por qué queres ser voluntario? </label>
                         <div class="col-md-8 inputGroupContainer">
                             <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
                                 <textarea class="form-control" name="comment"></textarea>
@@ -501,9 +479,9 @@
         <div class="col-xs-1 col-md-2"></div>
         <div class="col-xs-10 col-md-8">
             <div class="text-center">
-                <h1 style="color: #ed0400;">
+                <h2 style="color: #ed0400;">
                         CONTACTO
-                    </h1> </div>
+                    </h2> </div>
         </div>
         <div class="col-xs-1 col-md-2"></div>
     </div>
@@ -569,25 +547,27 @@
         <div class="col-xs-1 col-md-2"></div>
     </div>
     <!--INICIO FORMULARIO EMAIL JS-->
+    <!--
     <form id="myform" onsubmit=" console.log('Todos los input que anda',this);emailjs.sendForm('default_service', 'template_c6ZX6DXO', this); return false;" method="post">
-        <label>reply_to</label>
-        <input type="text" name="reply_to" />
-        <label>from_name</label>
-        <input type="text" name="from_name" />
-        <label>to_name</label>
-        <input type="text" name="to_name" />
-        <label>message_html</label>
-        <input type="text" name="message_html" />
-        <br>
-        <br>
-        <button> Send </button>
-    </form>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("user_htnIlNnLA1EWRQGSVuJTO");
-        })();
-    </script>
+    <label>reply_to</label>
+    <input type="text" name="reply_to" />
+    <label>from_name</label>
+    <input type="text" name="from_name" />
+    <label>to_name</label>
+    <input type="text" name="to_name" />
+    <label>message_html</label>
+    <input type="text" name="message_html" />
+    <br>
+    <br>
+    <button> Send </button>
+</form>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_htnIlNnLA1EWRQGSVuJTO");
+    })();
+</script>
+-->
     <!--    FIN BODY-->
 </body>
 <script>
