@@ -4,7 +4,7 @@
 
 html,
 body {
-/*    min-width: 100%;*/
+    /*    min-width: 100%;*/
     /*    overflow-x: hidden;*/
     /*100px de la imagen + 14*2 del margen*/
     height: 100%;
@@ -105,6 +105,10 @@ p {
     background-color: red;
 }
 
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
 .tablaIconos {
     width: 100%;
     text-align: center;
@@ -156,6 +160,11 @@ p {
     text-align: center;
 }
 
+.vertical-align-sm {
+    display: flex;
+    align-items: center;
+}
+
 
 /*=====================================================
 =            Bootstrap 2.3.2 Media Queries            =
@@ -196,6 +205,10 @@ p {
     .lineaIzquierda {
         padding-left: 0px;
         border-left: 0px;
+    }
+    .vertical-align-sm {
+        display: block;
+        align-items: center;
     }
 }
 
