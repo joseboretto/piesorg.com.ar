@@ -6,6 +6,7 @@ html,
 body {
     /*    min-width: 100%;*/
     /*    overflow-x: hidden;*/
+    /*    ESTO ME JODE EL SCROL EN Y TAMBIEN , ADEMAS DEL VISUALIZADOR DE IMAGENES*/
     /*100px de la imagen + 14*2 del margen*/
     height: 100%;
     margin: 0;
@@ -114,11 +115,12 @@ p {
     text-align: center;
 }
 
-.lightBoxGallery {
+.galeriaFotos {
     text-align: center;
+    width: 100%;
 }
 
-.lightBoxGallery img {
+.galeriaFotos img {
     margin: 5px;
 }
 
