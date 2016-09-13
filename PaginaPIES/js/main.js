@@ -34,21 +34,15 @@ $(document).ready(function () {
     $("#botonDonaciones").click(function () {
         cerrarTodosMenos("textoDonaciones");
     });
-    //obtengo todos los elemntos del formularios
-    nombreContacto = document.getElementById("nombreContacto");
-    emailContacto = document.getElementById("emailContacto");
-    asuntoContacto = document.getElementById("asuntoContacto");
-    mensajeContacto = document.getElementById("mensajeContacto");
-    formualarioContacto = document.getElementById("contact_form");
 
     function cerrarTodosMenos(boton) {
-        console.log("Boton", boton);
+        //console.log("Boton", boton);
         var element = document.getElementById(boton);
-        console.log("Elemnet", element);
+        //console.log("Elemnet", element);
         var style = window.getComputedStyle(element);
-        console.log("style", style);
+        //console.log("style", style);
         var display = style.getPropertyValue('display');
-        console.log("Display", display);
+        //console.log("Display", display);
         $("#textoAN").hide();
         $("#textoIPV").hide();
         $("#textoLF").hide();
@@ -57,16 +51,29 @@ $(document).ready(function () {
         var identificador = "#".concat(boton);
         if (display == "none") {
             $(identificador).show();
-            console.log("MUESTRO");
+            //console.log("MUESTRO");
             $('html, body').animate({
                 scrollTop: $(identificador).offset().top - anchoBarraNavegacion
             }, 1000);
         }
         else {
             $(identificador).hide();
-            console.log("ESCONDO");
+            //console.log("ESCONDO");
         }
     }
+    //obtengo todos los elemntos del formularios
+    nombreContacto = document.getElementById("nombreContacto");
+    emailContacto = document.getElementById("emailContacto");
+    asuntoContacto = document.getElementById("asuntoContacto");
+    mensajeContacto = document.getElementById("mensajeContacto");
+    formualarioContacto = document.getElementById("contact_form");
+    //control del carusel
+    $("#caruselIzq").click(function () {
+        $('.carousel').carousel('prev');
+    });
+    $("#caruselDer").click(function () {
+        $('.carousel').carousel('next');
+    });
 });
 
 function enviarEmailContacto() {

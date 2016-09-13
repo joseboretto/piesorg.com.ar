@@ -135,6 +135,19 @@ p {
     left: 99%;
 }
 
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+    max-height: inherit;
+    min-height: inherit;
+}
+
 .grid--borderBetween {
     background: #ed5d07;
     bottom: 0;
