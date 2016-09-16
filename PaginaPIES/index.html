@@ -560,7 +560,9 @@
             <div class="col-xs-10 col-md-8">
                 <!--            <div class="lineaIzquierda">-->
                 <!--            FORMULARIO-->
-                <form class="well form-horizontal" action="" method="post" id="contact_form" onsubmit="enviarEmailContacto()">
+                <form class="well form-horizontal" action="" method="post" id="contact_form" onsubmit="enviarEmailContacto(); return false;">
+                    <div class="alert alert-info message-contacto message-contacto-ok" style="display: none;">OK!</div>
+                    <div class="alert alert-danger message-contacto message-contacto-error" style="display: none;">Error!</div>
                     <fieldset>
                         <!-- Form Name -->
                         <legend></legend>

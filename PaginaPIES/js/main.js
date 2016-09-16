@@ -82,11 +82,21 @@ function enviarEmailContacto() {
     // console.log("Formulario ", nombreContacto.value, emailContacto.value, asuntoContacto.value, mensajeContacto.value);
     //console.log("Todos los input", todosLosInput, todosLosInput.value);
     // REVISE LO DE LOS PARAMETROS Y TENIAS RAZON PATO, DESPUES CREE UNA PANTAILLA CON UN SOLO PARAMTREO, LO TESTETO EN LA PAGINA Y ANFUVO PERO CUANDO PASO EL CODIGO ACA NO ANDA, LO PASE AL HTML PERO SIGUE SIN ANDAS, SOY UN NAVO.
-    emailjs.send("joseboretto", "plantilla", {
-        "nombre": "joseeeee"
-    }).then(function (response) {
+    var params = {
+      "reply_to": $('#emailContacto').val(),
+      "from_name": $('#from_name').val(),
+      "to_name": "to_name",
+      "message_html": $('#mensajeContacto').val()
+    };
+
+    $('.message-contacto').hide();
+
+
+    emailjs.send("default_service", "template_c6ZX6DXO", params).then(function (response) {
+      $('.message-contacto-ok').show();
         console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
     }, function (err) {
         console.log("FAILED. error=", err);
+        $('.message-contacto-error').show();
     });
 }
